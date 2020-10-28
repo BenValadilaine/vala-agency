@@ -2,14 +2,14 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import "./index.scss";
 
-const Navbar = () => {
+const Navbar = ({setLanguage}) => {
 
   return(
     <div className="navbarWrapper">
       <div className="navbar">
         <Link to="/">
         <svg className="navbarIcon" id="ad2e9aa6-dd58-46dd-8ac4-5cd79a399ac3" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" height="45" viewBox="0 0 713 847.85985">
-          <title>cabin</title>
+          <title>Vala - Agence Web</title>
           <path d="M482.08,603.40047a122.5375,122.5375,0,0,0,5.13995,12.38v.01q2.355,4.92,5.12006,9.59H707.36v.43q2.925-4.875,5.38-10.04a120.09911,120.09911,0,0,0,5.14-12.37Zm5.42,12.25v-2H712.49v2Zm16.76,26.54H695.7a125.03246,125.03246,0,0,0,10.71-14.81H493.55A125.04086,125.04086,0,0,0,504.26,642.19051Z" transform="translate(-243.5 -26.81984)" fill="#3f3d56"/>
           <path d="M721.24,592.1805c-.77,3.13-1.67,6.2-2.68,9.22H481.4c-1.01-3.02-1.91-6.09-2.68-9.22Z" transform="translate(-243.5 -26.81984)" fill="#3f3d56"/>
           <path d="M721.39,591.59047v-1.41H478.57v1.41q-1.27506-5.22-2.11-10.63H723.5Q722.675,586.36052,721.39,591.59047Z" transform="translate(-243.5 -26.81984)" fill="#3f3d56"/>
@@ -73,8 +73,8 @@ const Navbar = () => {
           <Link to="/work">Les projets</Link>
         </div>
         <div className="intlButtons">
-          <button>Fr</button>
-          <button>En</button>
+          <button id="setFr" onClick={() => setLanguage('fr')}>Fr</button>
+          <button id="setEn" onClick={() => setLanguage('en')}>En</button>
         </div>
       </div>
 

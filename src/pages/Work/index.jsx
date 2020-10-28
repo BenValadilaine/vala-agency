@@ -1,10 +1,14 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import './index.scss';
 
 const Work = () => {
 
   return(
-    <h1>Work page</h1>
+    <div>
+      <h1><FormattedMessage id="work.title"/></h1>
+      <p><FormattedMessage id="work.content"/></p>
+    </div>
   )
 };
 
