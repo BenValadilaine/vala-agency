@@ -72,9 +72,13 @@ const Navbar = ({setLanguage}) => {
           <Link to="/about">L'agence</Link>
           <Link to="/work">Les projets</Link>
         </div>
-        <div className="intlButtons">
-          <button id="setFr" onClick={() => setLanguage('fr')}>Fr</button>
-          <button id="setEn" onClick={() => setLanguage('en')}>En</button>
+        <div className="intlLinks">
+          <a id="setFr" onClick={() => setLanguage('fr')}>
+            <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/800px-Flag_of_France.svg.png' alt="Langue française" height="25" width="50"/>
+          </a>
+          <a id="setEn" onClick={() => setLanguage('en')}>
+            <img src='https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1024px-Flag_of_the_United_Kingdom.svg.png' alt="English language" height="25" width="50"/>
+          </a>
         </div>
       </div>
 

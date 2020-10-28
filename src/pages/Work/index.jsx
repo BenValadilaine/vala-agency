@@ -7,6 +7,10 @@ const Work = () => {
 //  const [projectSlug, setProjectSlug] = useState("");
   let { projectSlug } = useParams();
 
+  useEffect(()=>{
+    console.log(projectSlug);
+  }, []);
+
   return(
     <section>
       <div>
