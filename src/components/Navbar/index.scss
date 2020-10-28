@@ -10,7 +10,8 @@ $coral: #ff6584;
   padding-right: 15px;
 
   .navbar{
-  position: fixed;
+  position: block;
+  overflow: hidden;
   width: 95%;
   height: 60px;
   border-radius: 4px;
@@ -19,6 +20,7 @@ $coral: #ff6584;
   display: flex;
   flex-direction: row;
   align-items: center;
+  z-index: 1;
 
     .navbarIcon{
       margin-left: 15px;
@@ -43,6 +45,7 @@ $coral: #ff6584;
       button{
         margin-left: 5px;
         margin-right: 5px;
+        cursor: pointer;
       }
     }
   }
