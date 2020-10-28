@@ -30,7 +30,7 @@ const App = () => {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/work/:projectSlug">
+          <Route path="/work">
             <Work />
           </Route>
           <Route exact path="/">

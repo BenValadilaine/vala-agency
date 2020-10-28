@@ -1,15 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import { FormattedMessage } from 'react-intl';
 import './index.scss';
+import Projects from '../../components/Projects';
 
 const Work = () => {
-//  const [projectSlug, setProjectSlug] = useState("");
-  let { projectSlug } = useParams();
-
-  useEffect(()=>{
-    console.log(projectSlug);
-  }, []);
 
   return(
     <section>
@@ -17,16 +12,19 @@ const Work = () => {
         <h1><FormattedMessage id="work.title"/></h1>
         <p><FormattedMessage id="work.content"/></p>
         <div className="projectButtons">
-          <button>Platon</button>
-          <button>Solane</button>
-          <button>Sedal</button>
+          <Link to="/work/platon-study-case"><button>Platon</button></Link>
+          <Link to="/work/solane-study-case"><button>Solane</button></Link>
+          <Link to="/work/sedal-study-case"><button>Sedal</button></Link>
         </div>
       </div>
 
-      <div className="card">
-        <h4><FormattedMessage id={`${projectSlug}.title`}/></h4>
-        <p><FormattedMessage id={`${projectSlug}.content`} /></p>
-      </div>
+      <Router>
+        <Switch>
+          <Route path="/work/:projectSlug">
+            <Projects />
+          </Route>
+        </Switch>
+      </Router>
     </section>
   )
 };
