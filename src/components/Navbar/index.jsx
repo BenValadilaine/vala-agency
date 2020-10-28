@@ -5,7 +5,7 @@ import "./index.scss";
 const Navbar = () => {
 
   return(
-    <div className="wrapper">
+    <div className="navbarWrapper">
       <div className="navbar">
         <Link to="/">
         <svg className="navbarIcon" id="ad2e9aa6-dd58-46dd-8ac4-5cd79a399ac3" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" height="45" viewBox="0 0 713 847.85985">
@@ -68,7 +68,14 @@ const Navbar = () => {
           <polygon points="505.5 471.361 207.5 471.361 207.5 447.361 355.5 385.361 505.5 447.361 505.5 471.361" fill="#3f3d56"/>
         </svg>
         </Link>
-
+        <div className="navbarLinks">
+          <Link to="/about">L'agence</Link>
+          <Link to="/work">Les projets</Link>
+        </div>
+        <div className="intlButtons">
+          <button>Fr</button>
+          <button>En</button>
+        </div>
       </div>
 
     </div>
