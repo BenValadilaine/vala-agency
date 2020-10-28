@@ -21,27 +21,25 @@ const messages = {
 const App = () => {
   const [language, setLanguage] = useState('fr');
 
-
   return(
     <IntlProvider locale={language} messages={messages[language]}>
       <Router>
           <Navbar setLanguage={setLanguage}/>
+        <Switch>
 
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/work">
+          <Route path="/work/:projectSlug">
             <Work />
           </Route>
           <Route exact path="/">
             <Home />
           </Route>
-        <Switch>
 
         </Switch>
       </Router>
     </IntlProvider>
-
   )
 };
 
