@@ -1,0 +1,40 @@
+$darkgrey: #232323;
+$coral: #ff6584;
+$vlightgrey: #fefefe;
+
+.work{
+  margin: 40px 40px 20px 40px;
+  padding: 20px 40px 20px 40px;
+  background-color: $vlightgrey;
+  box-shadow: 0px 0px 30px rgba(black, 0.5);
+}
+
+.projectButtons{
+  margin: 40px 40px 20px 40px;
+  padding: 20px 40px 20px 40px;
+  background-color: $vlightgrey;
+  box-shadow: 0px 0px 30px rgba(black, 0.5);
+  display: flex;
+  justify-content: space-around;
+
+  button{
+    width: 100px;
+    height: 35px;
+    padding: 5px 15px 5px 15px;
+    border: 2px solid $coral;
+    border-radius: 4px;
+    color: $coral;
+    text-shadow: 1px 1px 1px $darkgrey;
+    background-color: $vlightgrey;
+
+    &:hover{
+      width: 100px;
+      height: 35px;
+      padding: 5px 15px 5px 15px;
+      color: $darkgrey;
+      text-shadow: none;
+      background-color: $coral;
+      border: none;
+    }
+  }
+}

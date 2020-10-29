@@ -5,7 +5,7 @@ import './index.scss';
 const About = () => {
 
   return(
-    <div>
+    <div className="about">
       <h1><FormattedMessage id="about.title"/></h1>
       <p><FormattedMessage id="about.content.one"/></p>
       <p><FormattedMessage id="about.content.two"/></p>

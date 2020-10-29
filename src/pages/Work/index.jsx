@@ -10,14 +10,15 @@ const Work = () => {
   return(
     <section>
       <div>
-        <h1><FormattedMessage id="work.title"/></h1>
-        <h4><FormattedMessage id="work.content"/></h4>
+        <div className="work">
+          <h1><FormattedMessage id="work.title"/></h1>
+          <h4><FormattedMessage id="work.content"/></h4>
+        </div>
         <div className="projectButtons">
           <button onClick={() => setCasename('platon-study-case')} >Platon</button>
           <button onClick={() => setCasename('solane-study-case')} >solane</button>
           <button onClick={() => setCasename('sedal-study-case')} >Sedal</button>
         </div>
-
         <Projects casename={casename}/>
       </div>
 
