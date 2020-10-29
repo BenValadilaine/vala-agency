@@ -35,6 +35,17 @@ $coral: #ff6584;
         color: $coral;
         text-decoration: none;
         font-weight: 700;
+
+        padding-top: 15px;
+        padding-bottom:15px;
+        transition: all 5s ease-out;
+
+
+        &:hover{
+          border-bottom: 1px solid $coral;
+          transition: border-bottom 2s ease-in-out;
+
+        }
       }
     }
 

@@ -1,30 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import React, { useState } from 'react';
+import {  Link } from "react-router-dom";
 import { FormattedMessage } from 'react-intl';
 import './index.scss';
 import Projects from '../../components/Projects';
 
 const Work = () => {
+  const [casename, setCasename] = useState('platon-study-case');
 
   return(
     <section>
       <div>
         <h1><FormattedMessage id="work.title"/></h1>
-        <p><FormattedMessage id="work.content"/></p>
+        <h4><FormattedMessage id="work.content"/></h4>
         <div className="projectButtons">
-          <Link to="/work/platon-study-case"><button>Platon</button></Link>
-          <Link to="/work/solane-study-case"><button>Solane</button></Link>
-          <Link to="/work/sedal-study-case"><button>Sedal</button></Link>
+          <button onClick={() => setCasename('platon-study-case')} >Platon</button>
+          <button onClick={() => setCasename('solane-study-case')} >solane</button>
+          <button onClick={() => setCasename('sedal-study-case')} >Sedal</button>
         </div>
+
+        <Projects casename={casename}/>
       </div>
 
-      <Router>
-        <Switch>
-          <Route path="/work/:projectSlug">
-            <Projects />
-          </Route>
-        </Switch>
-      </Router>
+
     </section>
   )
 };
